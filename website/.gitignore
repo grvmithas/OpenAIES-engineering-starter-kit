@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# generated at build time by prebuild script (mirrored from repo root)
+/content
+
 # production
 /build
 

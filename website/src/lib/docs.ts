@@ -6,7 +6,11 @@ import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 import { flattenNav, navigation } from './navigation';
 
-const REPO_ROOT = path.resolve(process.cwd(), '..');
+// Content is mirrored into website/content/ by the prebuild script.
+// This keeps all files within the Next.js project boundary (required for Vercel NFT tracing).
+// Same pattern used by Expo docs, Next.js docs, Docusaurus, etc.
+const REPO_ROOT = path.join(process.cwd(), 'content');
+
 
 export interface DocMeta {
   title: string;

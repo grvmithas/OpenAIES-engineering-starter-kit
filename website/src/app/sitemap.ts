@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
-import { getAllDocSlugs } from '@/lib/docs';
+import { flattenNav, navigation } from '@/lib/navigation';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://oaies.dev';
-  const slugs = getAllDocSlugs();
+  // Use the static navigation list — no fs access needed, eliminates NFT warning
+  const slugs = flattenNav(navigation).map(item => item.slug);
 
   const docPages = slugs.map(slug => ({
     url: `${baseUrl}/docs/${slug}`,
