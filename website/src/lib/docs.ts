@@ -13,13 +13,22 @@ import { flattenNav, navigation } from './navigation';
 // Handle both local (website/content) and Vercel (.next/content) paths
 function getContentRoot(): string {
   const possiblePaths = [
-    path.join(process.cwd(), 'content'),                    // Local: website/content
-    path.join(process.cwd(), '..', 'content'),              // Vercel standalone: parent/content
-    path.join(__dirname, '..', '..', 'content'),            // Vercel from src/lib
+    path.join(process.cwd(), 'content'),                           // Vercel root deployment
+    path.join(process.cwd(), '..', 'content'),                     // Vercel standalone mode
+    path.join(__dirname, '..', '..', 'content'),                   // From src/lib/ up to website/content
+    path.join(__dirname, '..', '..', '..', 'content'),             // From .next/server up to website/content
   ];
+  
   for (const p of possiblePaths) {
-    if (fs.existsSync(p)) return p;
+    if (fs.existsSync(p)) {
+      console.log(`[docs.ts] Found content at: ${p}`);
+      return p;
+    }
   }
+  
+  // Log warning about what we tried
+  console.warn(`[docs.ts] Content folder not found. Tried: ${possiblePaths.join(', ')}`);
+  
   // Fallback to the primary expected location
   return possiblePaths[0];
 }
