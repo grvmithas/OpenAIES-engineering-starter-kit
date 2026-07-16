@@ -9,7 +9,22 @@ import { flattenNav, navigation } from './navigation';
 // Content is mirrored into website/content/ by the prebuild script.
 // This keeps all files within the Next.js project boundary (required for Vercel NFT tracing).
 // Same pattern used by Expo docs, Next.js docs, Docusaurus, etc.
-const REPO_ROOT = path.join(process.cwd(), 'content');
+
+// Handle both local (website/content) and Vercel (.next/content) paths
+function getContentRoot(): string {
+  const possiblePaths = [
+    path.join(process.cwd(), 'content'),                    // Local: website/content
+    path.join(process.cwd(), '..', 'content'),              // Vercel standalone: parent/content
+    path.join(__dirname, '..', '..', 'content'),            // Vercel from src/lib
+  ];
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) return p;
+  }
+  // Fallback to the primary expected location
+  return possiblePaths[0];
+}
+
+const REPO_ROOT = getContentRoot();
 
 
 export interface DocMeta {
