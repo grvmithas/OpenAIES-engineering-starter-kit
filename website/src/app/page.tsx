@@ -1,3 +1,4 @@
+// Forced redeployment comment to trigger Vercel build pipeline
 import Link from 'next/link';
 import { navigation } from '@/lib/navigation';
 

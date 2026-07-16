@@ -18,6 +18,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = false;
+
 // Generate SEO metadata dynamically for each document page
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
