@@ -1,0 +1,67 @@
+name: Evaluation Gate
+
+on:
+  pull_request:
+    paths:
+      - 'prompts/**'
+      - 'src/prompts/**'
+      - '**/*.prompt.md'
+      - 'agents/**'
+      - '**/*.agent.md'
+
+jobs:
+  evaluation-gate:
+    name: LLM Evaluation Gate
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install evaluation dependencies
+        run: |
+          pip install deepeval ragas
+          
+      - name: Run DeepEval test suite
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPEVAL_API_KEY: ${{ secrets.DEEPEVAL_API_KEY }}
+        run: |
+          deepeval test run eval/ --verbose
+          
+      - name: Check evaluation results
+        if: failure()
+        run: |
+          echo "::error::Evaluation gate failed. One or more LLM evaluation tests did not meet threshold."
+          echo "::error::Review the test output above. Do not merge until all evaluations pass."
+          exit 1
+          
+      - name: Comment evaluation results on PR
+        uses: actions/github-script@v7
+        if: always()
+        with:
+          script: |
+            const fs = require('fs');
+            let comment = '## 🧪 LLM Evaluation Gate Results\n\n';
+            
+            if ('${{ job.status }}' === 'success') {
+              comment += '✅ **All evaluation tests passed.** This PR is safe to merge from an LLM quality perspective.\n\n';
+            } else {
+              comment += '❌ **Evaluation gate failed.** This PR must not be merged until all LLM evaluation tests pass.\n\n';
+              comment += '**Required action:** Review the failing tests in the Actions tab and fix the prompt or agent definition.\n\n';
+            }
+            
+            comment += '*Powered by OAIES Evaluation Gate — [documentation](../07-llmops/evaluation/)*';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
