@@ -65,40 +65,40 @@ All tool invocations (inputs and outputs) must be logged for audit, debugging, a
 | MCP | File | Primary Use |
 |-----|------|------------|
 | GitHub | [github.mcp.md](./version-control/github.mcp.md) | Issues, PRs, code search |
-| GitLab | [gitlab.mcp.md](./version-control/gitlab.mcp.md) | MRs, pipelines, issues |
-| Azure DevOps | [azure-devops.mcp.md](./version-control/azure-devops.mcp.md) | Work items, pipelines, repos |
-| Playwright | [playwright.mcp.md](./devtools/playwright.mcp.md) | Browser automation, testing |
-| Chrome DevTools | [chrome-devtools.mcp.md](./devtools/chrome-devtools.mcp.md) | Performance, debugging |
+| GitLab | gitlab.mcp.md (Planned) | MRs, pipelines, issues |
+| Azure DevOps | azure-devops.mcp.md (Planned) | Work items, pipelines, repos |
+| Playwright | playwright.mcp.md (Planned) | Browser automation, testing |
+| Chrome DevTools | chrome-devtools.mcp.md (Planned) | Performance, debugging |
 
 ### Project Management
-| MCP | File | Primary Use |
-|-----|------|------------|
-| Jira | [jira.mcp.md](./project-management/jira.mcp.md) | Issues, sprints, backlogs |
-| Linear | [linear.mcp.md](./project-management/linear.mcp.md) | Issues, projects, cycles |
-| Notion | [notion.mcp.md](./project-management/notion.mcp.md) | Docs, databases, pages |
+| MCP | Status | Primary Use |
+|-----|--------|------------|
+| Jira | jira.mcp.md (Planned) | Issues, sprints, backlogs |
+| Linear | linear.mcp.md (Planned) | Issues, projects, cycles |
+| Notion | notion.mcp.md (Planned) | Docs, databases, pages |
 
 ### Communication
-| MCP | File | Primary Use |
-|-----|------|------------|
-| Slack | [slack.mcp.md](./communication/slack.mcp.md) | Messages, channels, search |
-| Microsoft Teams | [teams.mcp.md](./communication/teams.mcp.md) | Messages, meetings, files |
+| MCP | Status | Primary Use |
+|-----|--------|------------|
+| Slack | slack.mcp.md (Planned) | Messages, channels, search |
+| Microsoft Teams | teams.mcp.md (Planned) | Messages, meetings, files |
 
 ### Infrastructure
-| MCP | File | Primary Use |
-|-----|------|------------|
-| Filesystem | [filesystem.mcp.md](./infrastructure/filesystem.mcp.md) | File read/write with path validation |
-| Docker | [docker.mcp.md](./infrastructure/docker.mcp.md) | Container management |
-| PostgreSQL | [postgres.mcp.md](./infrastructure/postgres.mcp.md) | Database queries (read-only by default) |
-| Redis | [redis.mcp.md](./infrastructure/redis.mcp.md) | Cache operations |
-| Supabase | [supabase.mcp.md](./infrastructure/supabase.mcp.md) | Database + auth + storage |
+| MCP | Status | Primary Use |
+|-----|--------|------------|
+| Filesystem | filesystem.mcp.md (Planned) | File read/write with path validation |
+| Docker | docker.mcp.md (Planned) | Container management |
+| PostgreSQL | postgres.mcp.md (Planned) | Database queries (read-only by default) |
+| Redis | redis.mcp.md (Planned) | Cache operations |
+| Supabase | supabase.mcp.md (Planned) | Database + auth + storage |
 
 ### Observability
-| MCP | File | Primary Use |
-|-----|------|------------|
-| Sentry | [sentry.mcp.md](./observability/sentry.mcp.md) | Error tracking, performance |
-| Datadog | [datadog.mcp.md](./observability/datadog.mcp.md) | Metrics, logs, traces |
-| Grafana | [grafana.mcp.md](./observability/grafana.mcp.md) | Dashboards, alerts |
-| OpenTelemetry | [opentelemetry.mcp.md](./observability/opentelemetry.mcp.md) | Traces, metrics, logs |
+| MCP | Status | Primary Use |
+|-----|--------|------------|
+| Sentry | sentry.mcp.md (Planned) | Error tracking, performance |
+| Datadog | datadog.mcp.md (Planned) | Metrics, logs, traces |
+| Grafana | grafana.mcp.md (Planned) | Dashboards, alerts |
+| OpenTelemetry | opentelemetry.mcp.md (Planned) | Traces, metrics, logs |
 
 ---
 

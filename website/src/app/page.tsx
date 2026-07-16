@@ -76,6 +76,7 @@ export default function HomePage() {
           <nav style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
             <Link href="/docs/README" style={{ padding: '0.4rem 0.85rem', borderRadius: 6, color: 'var(--text-subtle)', fontSize: '0.85rem', textDecoration: 'none', transition: 'color 0.15s', fontWeight: 500 }}>Docs</Link>
             <Link href="/docs/patterns/README" style={{ padding: '0.4rem 0.85rem', borderRadius: 6, color: 'var(--text-subtle)', fontSize: '0.85rem', textDecoration: 'none', transition: 'color 0.15s', fontWeight: 500 }}>Patterns</Link>
+            <Link href="/about" style={{ padding: '0.4rem 0.85rem', borderRadius: 6, color: 'var(--text-subtle)', fontSize: '0.85rem', textDecoration: 'none', transition: 'color 0.15s', fontWeight: 500 }}>About</Link>
             <Link href="/docs/08-ai-sdlc/README" style={{ padding: '0.4rem 0.85rem', borderRadius: 6, color: 'var(--text-subtle)', fontSize: '0.85rem', textDecoration: 'none', transition: 'color 0.15s', fontWeight: 500 }}>SDLC</Link>
             <Link href="/docs/resources/README" style={{ padding: '0.4rem 0.85rem', borderRadius: 6, color: 'var(--text-subtle)', fontSize: '0.85rem', textDecoration: 'none', transition: 'color 0.15s', fontWeight: 500 }}>Resources</Link>
             <a
@@ -346,6 +347,7 @@ export default function HomePage() {
         </p>
         <p style={{ marginTop: '0.5rem' }}>
           <Link href="/docs/README" style={{ color: 'var(--text-muted)', textDecoration: 'none', marginRight: '1.25rem' }}>Docs</Link>
+          <Link href="/about" style={{ color: 'var(--text-muted)', textDecoration: 'none', marginRight: '1.25rem' }}>About</Link>
           <Link href="/docs/CONTRIBUTING" style={{ color: 'var(--text-muted)', textDecoration: 'none', marginRight: '1.25rem' }}>Contributing</Link>
           <Link href="/docs/CHANGELOG" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Changelog</Link>
         </p>

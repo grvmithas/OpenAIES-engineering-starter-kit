@@ -40,6 +40,12 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
           {/* Action Links */}
           <div className="flex items-center gap-3">
+            <Link
+              href="/about"
+              className="text-[11px] font-semibold text-slate-300 hover:text-white px-3 py-1.5 border border-violet-950/30 rounded-lg hover:bg-slate-950/40 transition duration-150"
+            >
+              About
+            </Link>
             <a
               href="https://github.com/gaurav/oaies"
               target="_blank"

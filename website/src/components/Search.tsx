@@ -25,7 +25,7 @@ export default function Search() {
   useEffect(() => {
     if (isOpen && docs.length === 0) {
       setIsLoading(true);
-      fetch('/api/search')
+      fetch('/search-index.json')
         .then(res => res.json())
         .then(data => {
           setDocs(data.docs || []);
@@ -69,9 +69,15 @@ export default function Search() {
     }
 
     const fuse = new Fuse(docs, {
-      keys: ['title', 'description', 'text'],
-      threshold: 0.3,
-      includeMatches: true
+      keys: [
+        { name: 'title', weight: 0.7 },
+        { name: 'description', weight: 0.2 },
+        { name: 'text', weight: 0.1 }
+      ],
+      threshold: 0.4,
+      ignoreLocation: true,
+      findAllMatches: true,
+      minMatchCharLength: 2
     });
 
     const searchResults = fuse.search(query).slice(0, 8).map(res => ({

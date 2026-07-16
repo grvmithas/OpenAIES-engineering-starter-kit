@@ -51,18 +51,18 @@ Every pattern contains exactly these 13 components:
 
 | Pattern | Problem It Solves | Maturity |
 |---------|------------------|---------|
-| [planner-pattern/](./planner-pattern/) | Decomposing complex tasks into reliable sub-tasks | ✅ Stable |
-| [reviewer-pattern/](./reviewer-pattern/) | Systematic review of any artifact | ✅ Stable |
-| [context-pattern/](./context-pattern/) | Managing context across long-running tasks | ✅ Stable |
-| [debug-pattern/](./debug-pattern/) | Systematic hypothesis-driven debugging | ✅ Stable |
-| [migration-pattern/](./migration-pattern/) | Migrating data, systems, or codebases safely | ✅ Stable |
-| [legacy-modernization-pattern/](./legacy-modernization-pattern/) | AI-assisted legacy code modernization | ✅ Stable |
-| [architecture-pattern/](./architecture-pattern/) | Designing and reviewing system architecture | ✅ Stable |
-| [optimization-pattern/](./optimization-pattern/) | Performance and cost optimization | ✅ Stable |
-| [enterprise-pattern/](./enterprise-pattern/) | Enterprise-scale AI deployment | ✅ Stable |
-| [release-pattern/](./release-pattern/) | Safe, reliable AI-assisted releases | ✅ Stable |
-| [hotfix-pattern/](./hotfix-pattern/) | Rapid response to production incidents | ✅ Stable |
-| [root-cause-pattern/](./root-cause-pattern/) | Post-incident root cause identification | ✅ Stable |
+| [planner-pattern/](./planner-pattern/README.md) | Decomposing complex tasks into reliable sub-tasks | ✅ Stable |
+| reviewer-pattern/ | Systematic review of any artifact | 📋 Planned |
+| context-pattern/ | Managing context across long-running tasks | 📋 Planned |
+| debug-pattern/ | Systematic hypothesis-driven debugging | 📋 Planned |
+| migration-pattern/ | Migrating data, systems, or codebases safely | 📋 Planned |
+| legacy-modernization-pattern/ | AI-assisted legacy code modernization | 📋 Planned |
+| architecture-pattern/ | Designing and reviewing system architecture | 📋 Planned |
+| optimization-pattern/ | Performance and cost optimization | 📋 Planned |
+| enterprise-pattern/ | Enterprise-scale AI deployment | 📋 Planned |
+| release-pattern/ | Safe, reliable AI-assisted releases | 📋 Planned |
+| hotfix-pattern/ | Rapid response to production incidents | 📋 Planned |
+| root-cause-pattern/ | Post-incident root cause identification | 📋 Planned |
 
 ---
 

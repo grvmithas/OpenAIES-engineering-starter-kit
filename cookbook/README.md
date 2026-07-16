@@ -27,25 +27,25 @@ The cookbook adapts the OAIES standard to each technology context so you don't h
 
 | Technology | Status | Contents |
 |-----------|--------|---------|
-| [react/](./react/) | ✅ Stable | Components, hooks, state management, testing |
-| [nextjs/](./nextjs/) | ✅ Stable | Routing, SSR, RSC, streaming, caching |
-| [node/](./node/) | ✅ Stable | APIs, middleware, async patterns |
-| [python/](./python/) | ✅ Stable | FastAPI, Django, async, type hints |
-| [java/](./java/) | ✅ Stable | Spring Boot, microservices, JPA |
-| [dotnet/](./dotnet/) | ✅ Stable | ASP.NET Core, EF Core, CQRS |
-| [azure/](./azure/) | ✅ Stable | Azure AI, Cognitive Services, APIM |
-| [aws/](./aws/) | ✅ Stable | Bedrock, Lambda, Step Functions |
-| [docker/](./docker/) | ✅ Stable | Dockerfile optimization, compose, multi-stage |
-| [kubernetes/](./kubernetes/) | ✅ Stable | Deployments, scaling, debugging |
-| [postgres/](./postgres/) | ✅ Stable | Query optimization, migrations, pgvector |
-| [redis/](./redis/) | ✅ Stable | Caching patterns, sessions, rate limiting |
-| [mongo/](./mongo/) | ✅ Stable | Schema design, aggregations, indexing |
-| [graphql/](./graphql/) | ✅ Stable | Schema design, resolvers, federation |
-| [microfrontends/](./microfrontends/) | ✅ Stable | Module federation, routing, state sharing |
-| [react-native/](./react-native/) | ✅ Stable | Navigation, native modules, performance |
-| [performance/](./performance/) | ✅ Stable | Web vitals, bundle optimization, profiling |
-| [accessibility/](./accessibility/) | ✅ Stable | WCAG 2.2, ARIA, screen reader testing |
-| [seo/](./seo/) | ✅ Stable | Technical SEO, structured data, Core Web Vitals |
+| [react/](./react/README.md) | ✅ Stable | Components, hooks, state management, testing |
+| nextjs/ | 📋 Planned | Routing, SSR, RSC, streaming, caching |
+| node/ | 📋 Planned | APIs, middleware, async patterns |
+| python/ | 📋 Planned | FastAPI, Django, async, type hints |
+| java/ | 📋 Planned | Spring Boot, microservices, JPA |
+| dotnet/ | 📋 Planned | ASP.NET Core, EF Core, CQRS |
+| azure/ | 📋 Planned | Azure AI, Cognitive Services, APIM |
+| aws/ | 📋 Planned | Bedrock, Lambda, Step Functions |
+| docker/ | 📋 Planned | Dockerfile optimization, compose, multi-stage |
+| kubernetes/ | 📋 Planned | Deployments, scaling, debugging |
+| postgres/ | 📋 Planned | Query optimization, migrations, pgvector |
+| redis/ | 📋 Planned | Caching patterns, sessions, rate limiting |
+| mongo/ | 📋 Planned | Schema design, aggregations, indexing |
+| graphql/ | 📋 Planned | Schema design, resolvers, federation |
+| microfrontends/ | 📋 Planned | Module federation, routing, state sharing |
+| react-native/ | 📋 Planned | Navigation, native modules, performance |
+| performance/ | 📋 Planned | Web vitals, bundle optimization, profiling |
+| accessibility/ | 📋 Planned | WCAG 2.2, ARIA, screen reader testing |
+| seo/ | 📋 Planned | Technical SEO, structured data, Core Web Vitals |
 
 ---
 

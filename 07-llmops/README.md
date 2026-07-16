@@ -40,6 +40,7 @@ Without LLMOps, every prompt change is a deployment risk. With LLMOps, prompt ch
 | File | What It Covers |
 |------|----------------|
 | [evaluation/framework-selection.md](./evaluation/framework-selection.md) | RAGAS vs DeepEval vs Promptfoo — when to use each |
+| [Live Eval Script (eval/test_sample.py)](../eval/test_sample.py) | Working python test case using DeepEval for semantic relevancy |
 | [evaluation/golden-set-management.md](./evaluation/golden-set-management.md) | Building and maintaining regression test suites |
 | [evaluation/llm-as-judge.md](./evaluation/llm-as-judge.md) | Biases, calibration, and safeguards |
 | [evaluation/continuous-eval.md](./evaluation/continuous-eval.md) | Embedding evaluation in production workflows |
